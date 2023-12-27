@@ -7,21 +7,48 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <section class="box">
     <h1>Kalorienrechner</h1>
     <form id="kalorienrechner">
-        <label for="weight" >Körpergewicht in kg</label>
-        <input type="number" id="körpergewicht">
+        <div>
+        <label for="weight">Körpergewicht in kg</label>
+        <input type="number" id="weight">
+        </div>
 
+        <div>
         <label for="height">Körpergröße in cm</label>
-        <input type="number" id="körpergröße">
+        <input type="number" id="height">
+        </div>
 
+        <div>
         <label for="age">Alter in Jahren</label>
-        <input type="number" id="alter">
+        <input type="number" id="age">
+        </div>
 
-        <button class="calculator" onclick="grundumsatz()">Calculate!</button>
+        <div class="radioBtn">
+        <h2>Geschlecht:</h2>
+        <input type="radio" id="männlich" name="geschlecht" value="männlich">
+        <label for="männlich">Männlich</label>
+
+        <input type="radio" id="weiblich" name="geschlecht" value="weiblich">
+        <label for="weiblich">Weiblich</label>
+        </div>
+
+        <div>
+            <label for="palFaktor">Aktivitätslevel</label>
+            <select name="pal" id="pal">
+                <option value="1.2">Keine sportliche Aktivität</option>
+                <option value="1.55">Ich mache 1 - 2x die Woche sport</option>
+                <option value="1.9">Ich mache mind. 4x die Woche Sport</option>
+            </select>
+        </div>
+
+        <button class="calculator" onclick="calcGrundumsatz()">Calculate!</button>
 
         <p class="output"></p>
+        <!-- <p class="outputGesamtumsatz"></p> -->
     </form>
+</section>
 
     <script src="./assets/js/main.js"></script>
     
